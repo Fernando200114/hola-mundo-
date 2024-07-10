@@ -1,0 +1,6 @@
+
+#Escribe un programa que calcule el índice de masa corporal (IMC) a partir del peso y la altura introducidos por el usuario.
+peso = float(input("Ingrese su peso en kilogramos: "))            #Solicitamos el ingreso de dos numeros de tipo flotane
+altura = float(input("Ingrese su altura en metros: "))
+resultado  = peso / (altura ** 2)                                 # Colocamos una variable con la formula del peso sobre la aultara al cuadrado
+print("Su índice es:", resultado)

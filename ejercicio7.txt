@@ -1,0 +1,4 @@
+#Conversión de grados Celsius a Fahrenheit: Escribe un programa que convierta una temperatura dada en grados Celsius a grados Fahrenheit.
+celsius= float(input("Ingrese los grados celsius"))        #Pedimos al usuario el ingreso de grados en celsius
+fahrenheit = (celsius * 9/5) + 32                          # Colocamos una variable fahrenhet en el que se va a colocar la formula de fahrenhet  + 32  cumpliendo la formula
+print(f"{celsius} sus grados son  celsius, {fahrenheit} sus grados son fahreneit") # Iprimimos cada una de las variables escritas en llaves mas el texto que queremos que acompañe el resultado

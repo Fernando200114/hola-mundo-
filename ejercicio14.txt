@@ -1,0 +1,16 @@
+
+ #Escribe un programa que determine si una cadena introducida por el usuario es un palíndromo.
+ingreso = input("ingrese un texto")                             # Solicitamos al usuario el ingreso de un texto
+ingr=''.join(reversed(ingreso))                                 #Creamos una varibale que sea igual a "".join con la funcion reversed del texto a ingresar
+if ingreso == ingr:                                             #Colocamos la funcion if donde el ingreso va a comparar ingeso con ingr
+  print("es un polidromo")                                      #En el cual si se cumple sera un polidromo caso contrario no lo sera
+else:
+  print("no es un polidromo")
+
+
+#ingreso = input("ingrese un texto")
+#if ingreso == ingreso[::-1]:
+ # print("es un polidromo")
+#else:
+  #print("no es un polidromo")
+     

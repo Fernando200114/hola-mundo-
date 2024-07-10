@@ -1,0 +1,6 @@
+#Escribe un programa que sume todos los números naturales hasta un número límite introducido por el usuario.
+ingreso = int(input("ingrese el numero"))                      #Solicitamos el ingreso de un numero
+suma = 0                                                       # Creamos una variable = 0
+for val in range(1,ingreso + 1):                               # Creamos un buncle con rango de 1 al numero que vamos a ingresar +1
+    suma = val + suma                                          # Sumamos el valor del rango mas la variable suma
+print(suma)

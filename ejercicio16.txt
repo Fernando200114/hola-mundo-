@@ -1,0 +1,7 @@
+ #Escribe un programa que genere y muestre 5 números aleatorios entre 1 y 100.
+ import random                                                  #Importamos la libreria random en el q random nos va a colocr numeros aleatorios
+print("5 números aleatorios entre 1 y 100:")
+for _ in range(5):                                              #creamos un rango donde solicitamos el ingreso solo de 5 valores
+    numero = random.randint(1, 100)                             #creamos una variable donde solicitamos a random y  radindit  para q nos de en numeros aleatorios enteros
+    print(numero)
+     

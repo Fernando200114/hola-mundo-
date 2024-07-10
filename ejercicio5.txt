@@ -1,0 +1,7 @@
+#Escribe un programa que pida tres números al usuario y determine cuál es el mayor.
+num1 = int(input("ingrese un valor"))                    #Pedimos al usuario que nos deje ingresar tres valores
+num2 = int(input("ingrese otro numero"))
+num3 = int(input("ingrese un tercer valor"))
+print("El numero mayor es")
+respuesta = max( num1 , num2 , num3)                     #creamos una variable nueva utilizando max  que pide el numero maximo de los tres numeros ingresados
+print(respuesta)                                         #imprimimos la variable respuesta

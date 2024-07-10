@@ -1,0 +1,4 @@
+#Escribe un programa que calcule el área de un círculo a partir de su radio, ingresado por el usuario.
+area = int(input("ingrese el valor"))                     #Pedimos al usuario el area del circulo
+area = 3.14 * (area**2)                                   # utilizamos el are adel circulo que es el valor de pi por el area al cuadrado y imprimimos area
+print(area)

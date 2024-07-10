@@ -1,0 +1,6 @@
+#Tabla de multiplicar: Escribe un programa que muestre la tabla de multiplicar de un número introducido por el usuario.
+#Tabla de multiplicar: Escribe un programa que muestre la tabla de multiplicar de un número introducido por el usuario.
+numero = int(input("ingrese un numero"))                     # Solicitamos el ingreso de un numero
+for val in range(1,11):                                      #Creamos un rango  del numero que queremos iniciar hasta el ultimo nuero que queremos
+    resultado = numero * val                                 #creamos una variable donde  vamos a imprimir el numero ingresado por el val del rango
+    print(f"{numero} x {val} = {resultado}")                 #Imprimimos en formato el numero x el valor y el resultado

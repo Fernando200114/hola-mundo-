@@ -1,0 +1,8 @@
+#Escribe un programa que determine si un número introducido por el usuario es par o impar.
+num1 = int(input("ingrese un numero"))
+if num1 %2 ==0:                                               #Solicitamos  al usuario el ingreso de un numero despues se  pone la condicion de que si el numero ingresado al hacer modulo 2 tiene residuo 0 sea par
+                                                              # si no se  cumple colocaremos un caso contrario diciendo que el numero es inpar
+  print("el numero es par")
+else:
+  print("el numero es inpar")
+     

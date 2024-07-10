@@ -1,0 +1,7 @@
+#Escribe un programa que pida al usuario dos números y los sume.
+num1 = int(input("ingrese un numero: "))
+num2 = int(input("ingrese otro numero "))                    #Solicitamos  al usuario que nos ingrese dos numeros
+                                                             #luego creamos una variable que realize una suma para num1 y num2 y procedemos a imprimir num1 + num2
+val = num1 + num2
+print(num1 + num2)
+     

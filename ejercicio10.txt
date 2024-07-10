@@ -1,0 +1,15 @@
+ #Escribe un programa que determine si un número introducido por el usuario es primo.
+ numero = int(input("ingrese el valor"))                      #Solicitamos el ingreso de un numero
+if numero <= 1:                                               #Decimos que si numero es menor igual a 1 no es primo  no se cumple
+    print("el numero no  es primo")                           #Caso contrario primo va hacer igual a verdad y creamos un rango
+else:
+    primo = True
+    for val in range (2,int(numero**0.5) + 1):                #Se crea un rango desde 2 hasta la raiz cuadradada del numero ingresado + 1
+      if numero %val == 0:                                    #Se  calcula hasta valores menores que la raiz cuadrada
+            primo = False
+            break                                             # Colocamos un break para salir del bucle y decimos que si el numero es primo sera verdadero caso contrario ser falso
+    if primo:
+        print("es verdadero")
+    else:
+        print("es falso")
+     

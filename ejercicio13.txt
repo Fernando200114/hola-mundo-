@@ -1,0 +1,8 @@
+#Escribe un programa que cuente el número de vocales en una cadena introducida por el usuario.
+usuario = input("ingrese una cadena de texto")                 #Solicitamos el ingreso de un texto
+contador = 0                                                   #Creamos una variable igual a cero
+
+for val in usuario:                                            #Creamos un bucle para recorrer el texto
+    if val in "aeiou":                                         #Creamos una funcion if donde vamos a decir que si en val se encuentra las vocales
+        contador = contador+1                                  #Creamos otra funcion en el que vamos a sumar el valor del contador
+print(f"{usuario} tiene {contador} vocales")                   # Imprimimos en formato de el usuario y el contador

@@ -1,0 +1,24 @@
+# Escribe un programa que realice operaciones básicas (suma, resta, multiplicación y división) entre dos números introducidos por el usuario
+num1 = int(input("ingrese un numero"))
+num2 = int(input("ingrese otro numero"))
+print(""" INgrese la opcion que desea ingresar                #Solicitamos al usuario el ingreso de dos numeros  y de la misma manera le pedimos que nos deje ingresar una opcion
+                                                              #decimos que si opcion es igual a la opcion1 (sumar) nos deje imprimir la suma   y utilizamos elif para tener mas de un componente y de igual manera
+                                                              #para el resto de las operaciones
+1) Sumar
+2) Restar
+3) MUltiplicar
+4) Dividir
+5) Salir
+""")
+opcion = int(input("ingrese una opcion"))
+
+if opcion ==1:
+ print(num1 + num2)
+elif opcion ==2:
+ print(num1 - num2)
+elif opcion ==3:
+ print(num1 * num2)
+elif opcion ==4:
+ print(num1 / num2)
+elif opcion ==5:
+ print("Saliendo ...")

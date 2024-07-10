@@ -1,0 +1,4 @@
+# Escribe un programa que invierta una cadena introducida por el usuario.
+cadena = input("ingrese el texto")                             #Solicitamos el ingreso de un texto
+resultado = ''.join(reversed(cadena))                          #Creamos una variable que va hacer igual a ""join con la funcion reversed para que nuestro texto nos de alrevez mas la variable de ingresar el texto
+print(resultado)                                               # Si no colocamos join nos va a ingresar un error
