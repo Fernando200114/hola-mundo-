@@ -1,0 +1,135 @@
+# Paso 1: Creamos  el directorio de trabajo 
+
+mkdir trabajo
+Creamos el directorio trabajo/archivo
+
+Nos cambiamos al directorio trabajo/archivo 
+cd trabajo_avanzado/archivos
+
+Creamos otro directorio y lo llamaremos documentos 
+mkdir documentos
+
+# Crear archivos de ejemplo
+echo "este es el archivo1 contiene un ejemplo" > archivo1.txt
+echo escribe el texto "este es el archivo1 contiene texto de prueba" en el archivo archivo1.txt. El operador > sobrescribe el archivo si ya existe o en el caso de que no existe lo crea 
+
+echo "este es el archivo2 contiene datos del ejemplo para el analisis" > archivo2.txt
+ de igual manera escribe el texto en archivo2.txt
+ 
+echo "prueba de duplicacion de lineas" >> archivo2.txt
+Añadimos el texto "prueba de duplicacion de lineas" al final de archivo2.txt El operador >> se usa para añadir contenido al final del archivo en lugar de sobrescribirlo
+
+echo "prueba de duplicacion de lineas" >> archivo2.txt
+Esto nos permite añadir el mismo texto otra vez al final de archivo2.txt. Esto crea duplicados para demostrar cómo se manejan los archivos duplicados
+
+echo "texto" > archivo.txt
+Escribe el texto "texto" en archivo.txt, sobrescribiendo cualquier contenido previo o creando el archivo si no existe
+
+
+# Paso 2: Crear directorios adicionales y mover archivos
+mkdir documentos
+Aseguramos que el archivo se encuentre colocando nuevamente el mkdir documentos o de igual manera podemos observar con ls  
+
+
+mv archivo1.txt documentos/
+mv archivo2.txt documentos/
+mv archivo.txt documentos/
+Movemos los archivos1.txt archivo2.txt, y archivo.txt al directorio ducumentos En este caso utilizamos mv para mover los archivos y eliminar los archivos originales 
+
+
+
+# Paso 3: Buscar y mostrar archivos
+find . -name "*.txt"
+Utilizamos find para poder buscar los archivos con la extension de txt en el directorio actual, -name es la funcion de find que permite buscar el patron especifico 
+
+
+
+head -n 2 documentos/archivo2.txt
+Mostramos las primeras 2 líneas del archivo archivo2.txt. El comando head se usa para visualizar las primeras líneas de un archivo
+
+
+tail -n 2 documentos/archivo.txt
+Muestra las últimas 2 líneas del archivo archivo.txt El comando tail es útil para ver el final de un archivo
+
+
+# Paso 4: Contar palabras y buscar contenido
+wc -w documentos/archivo2.txt
+Con wc -w nos permite contar el número de palabras y caracteres del archivo en este caso  del archivo2.txt 
+
+
+grep -C 2 "prueba" documentos/archivo2.txt
+Con grep nos permite buscar el término "prueba “en el archivo2.txt dentro del directorio y muestra las dos líneas antes y después de la palabra 
+
+
+
+wc -w documentos/archivo.txt
+grep -C 2 "texto" documentos/archivo.txt
+Nos da la misma función pero en este caso nos da del archivo.txt
+De igual manera busca la palabra "texto" en archivo.txt y muestra 2 líneas de contexto alrededor de la palabra 
+
+
+# Paso 5: Ordenar y eliminar duplicados
+sort documentos/archivo1.txt
+En este caso ordenamos alfabéticamente las líneas del archivo1.txt y muestra su resultado en pantalla sort nos permite ordenar las líneas de un archivo 
+
+
+
+uniq documentos/archivo2.txt > documentos/archivo2_sin_duplicados.txt
+Con el comando uniq nos permite eliminar las líneas duplicadas del archivo2.txt y guarda el resultado 
+
+
+
+# Paso 6: Comprimir y extraer archivos
+tar czvf documentos_comprimidos.tar.gz documentos/
+Nos permite comprimir el directorio documentos en un archivo .tar.gz usando tar 
+
+tar xzvf documentos_comprimidos.tar.gz
+Extraemos el contenido del archivo documentos_comprimidos.tar.gz
+
+
+# Paso 7: Listar archivos
+ls documentos/
+Listamos los archivos y sus subdirectorios dentro del directorio documentos 
+
+
+# Paso 8: Crear y ejecutar el script de procesamiento
+vim procesar_archivos.sh
+
+
+#!/bin/bash
+cd "$(dirname "$0")"
+mkdir resultados
+rm -f resultados/*.txt
+cp documentos/*.txt resultados/
+for archivo in resultados/*.txt; do
+  sort "$archivo" | uniq > "${archivo}.sorted"
+  mv "${archivo}.sorted" "$archivo"
+done
+
+
+
+
+
+#!/bin/bash indica que el script debe ser ejecutado con Bash
+
+cd "$(dirname "$0")" cambia al directorio donde está ubicado el script
+
+mkdir  resultados crea el directorio volvemos a crear el directorio en el caso que no se hubiera creado 
+
+rm -f resultados/*.txt elimina todos los archivos txt en el directorio resultados en el caso que exista 
+
+cp documentos/*.txt resultados/ copia todos los archivos txt del directorio documentos al directorio resultados
+
+for archivo in resultados/*.txt; do  done itera sobre cada archivo txt en resultados
+
+sort "$archivo" | uniq > "${archivo}.sorted" ordena el archivo, elimina duplicados y guarda el resultado en un nuevo archivo con .sorted agregado al nombre
+
+mv "${archivo}.sorted" "$archivo" reemplaza el archivo original con el archivo ordenado y sin duplicados
+
+
+
+chmod +x procesar_archivo.sh
+Una vez terminado de realizar procedemos a dar permisos con chmod + x para todos los usuarios y hacerlo ejecutable 
+
+./procesar_archivo.sh
+Para terminar ejecuamos el script del directorio procesar:archivo.sh
